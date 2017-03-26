@@ -2,11 +2,11 @@ version: '2'
 services:
   grafana_graphite:
     build: .
-    image: kamon/grafana_graphite
-    container_name: kamon-grafana-dashboard
+    image: sammymax/graphite09-grafana42
+    container_name: grafana-graphite
     ports:
-      - '80:80'
-      - '81:81'
+      - '82:80'
+      - '127.0.0.1:81:81'
       - '8125:8125/udp'
       - '8126:8126'
       - '2003:2003'
